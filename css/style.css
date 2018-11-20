@@ -1,6 +1,12 @@
 body {
    /* font-family: 'Open Sans', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    
+}
+html {
+    min-height: 100%;
+    position: relative;
 }
 
 #intro {
@@ -49,6 +55,10 @@ a.nav-link {
     color: white;
     
 }
+.margen-3 {
+padding: -100px 0;
+}
+
 textarea.form-control {
     height: 102px;
 }
@@ -87,6 +97,10 @@ h3.bar {
 
 .mr-3, .mx-3 {
     margin-right: 0rem!important;
+}
+h5 {
+    font-size: 1.5rem;
+    margin-top: 27px;
 }
 /***************SERVICIOS ***************/
 .section {
@@ -216,6 +230,13 @@ footer.footer2 {
     background-color: #0F9AE1; 
     color: white;
     padding: 0px 0 25px 0;
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
+a.black {
+    color: black;
 }
 
 @media screen and (max-width:1200px) {
@@ -236,6 +257,10 @@ footer.footer2 {
         font-weight: 600;
         padding-top: 5px;
         font-size: 19px;
+    }
+    h5 {
+        font-size: 1.5rem;
+        margin-top: 11px;
     }
 }
 @media screen and (max-width:992px){  
@@ -313,7 +338,7 @@ footer.footer2 {
     h5 {
         font-size: 17px;
         font-weight: 500;
-        padding-top: 18px;
+        padding-top: 0px;
     }
 
     h4.mt-0 {
@@ -344,7 +369,7 @@ footer.footer2 {
     .margen-top {
         padding: 10px 0px;
     
-}
+}}
 @media screen and (max-width:772px){ 
 
     .brand {
@@ -416,7 +441,7 @@ h2.cont {
     text-align: center;
 }
 h5 {
-    font-size: 17px;
+    font-size: 23px;
     font-weight: 500;
     padding-top: 18px;
     text-align: left;
@@ -481,6 +506,10 @@ h4.mt-0 {
     padding-left:0px;
     
     
+}
+.margen-3 {
+    padding: -100px 0;
+    text-align: center;
 }
 .btn-enviar2 {
     background: white;
