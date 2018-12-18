@@ -7,6 +7,7 @@ body {
 html {
     min-height: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 #intro {
@@ -17,6 +18,10 @@ html {
 }
 a {
     color: white;
+}
+img {
+    height: auto;
+    max-width: 100% auto;
 }
 
 .navbar {
@@ -35,6 +40,7 @@ background-blend-mode: multiply;
     position: absolute;
     top: -89px;
     padding-left:0px;
+    
 }
 a.nav-link {
     font-size: 25px;
@@ -107,9 +113,13 @@ h5 {
     padding: 100px 0;
 }
 
+
+
 h4.mt-0 {
     font-weight: 600;
     padding-top: 25px;
+    font-size: 1rem;
+    margin-left: -11px;
 }
 
 .services{
@@ -171,6 +181,8 @@ h2.cobertura{
     border: 2px solid #0F9AE1;
     color: #0F9AE1;
 }
+
+
 
 /*------------- footer------------*/
 
@@ -369,7 +381,15 @@ a.black {
     .margen-top {
         padding: 10px 0px;
     
-}}
+    }
+    
+   span.header-oculto  {
+    display: none;
+   }
+
+}
+
+
 @media screen and (max-width:772px){ 
 
     .brand {
@@ -381,9 +401,18 @@ a.black {
     }
  }
 
+ @media screen and (max-width:600px){ 
+
+ }
+ 
 
 @media screen and (max-width:577px){  
-
+ h3 {
+     font-size: 24px;
+ }
+ h2.cobertura {
+    font-size: 24px;
+ }
     h3.bar {
         font-weight: 600;
         padding-top: 10px;
@@ -441,7 +470,7 @@ h2.cont {
     text-align: center;
 }
 h5 {
-    font-size: 23px;
+    font-size: 1.2rem;
     font-weight: 500;
     padding-top: 18px;
     text-align: left;
@@ -502,8 +531,8 @@ h4.mt-0 {
 }
 .brand {
     position: absolute;
-    top: -40px;
-    padding-left:0px;
+    top: -60px;
+    padding-left:-10px;
     
     
 }
