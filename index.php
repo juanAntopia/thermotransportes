@@ -19,6 +19,56 @@
      <!-- Datepicker  -->
      <link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+    <script>
+        $(function(){
+            $("#btn-ajax").click(function(){
+                var url = 'mail/ajax.php';
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: $("#formularioAjax").serialize(),
+                    success: function(data){
+                        $('#nombre-status').html('');
+                        $('#email-status').html('');
+                        $('#telefono-status').html('');
+                        $('#origen-status').html('');
+                        $('#destino-status').html('');
+                        $('#fecha-status').html('');
+                        $('#opciones-servicio-status').html('');
+                        $('#opciones-carga-status').html('');
+                        $('#mensaje-status').html('');
+                        $('#mensajeErr-status').html(data);
+                    }
+                });
+                return false;
+            });
+        });
+   
+    </script>
+
+    <script>
+    
+    $(function(){
+            $("#btn-ajax2").click(function(){
+                var url = 'mail/ajax2.php';
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: $("#contact-form").serialize(),
+                    success: function(data){
+                        $('#nombre2-status').html('');
+                        $('#email2-status').html('');
+                        $('#telefono2-status').html('');
+                        $('#ciudad2-status').html('');
+                        $('#mensaje2-status').html('');
+                        $('#mensajeErr-status').html(data);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
   
   </head>
   <body>
@@ -47,17 +97,17 @@
                             <div class="row">
                                    <div class="col-xs-12 col-sm-5 col-md-6 ">
                                         <div class="brand">
-                                                <img src="images/brand.png" alt=" Thermotransportes logotipo" width="200">
+                                            <img src="images/brand.png" alt=" Thermotransportes logotipo" width="200">
                                         </div>   
                                    </div>
-                                  <div  id="blue"  class=" COL-XS-12 contacto col-sm-7 col-md-5 col-lg-4  ml-auto ">
+                                  <div  id="blue" class="col-xs-12 contacto col-sm-7 col-md-5 col-lg-4 ml-auto">
                                        <h2 class="cont">¡PIDE INFORMES!</h2>
-                                       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formulario-ajax" method="post" role="form">
+                                       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="formularioAjax" method="post" role="form" onsubmit="return validar();">
                                             <div id="mensajeErr-status"></div>
                                             <div class="ajax-hidden">
                                                 <div class="form-group">
                                                     <label class="sr-only" for="c_nombre">Nombre</label>
-                                                    <input type="text" id="c_nombre" class="form-control" name="nombre" placeholder="Nombre">
+                                                    <input type="text" id="c_nombre" class="form-control" name="nombre" placeholder="Nombre" required>
                                                     <div id="nombre-status" style="color:white;"></div>
                                                 </div>
                                                 <div class="form-group">
@@ -87,14 +137,14 @@
                                                 </div>
                                                 <div class="form-group">
                                                         <input id="fechaTransporte"
-                                                        class=' datepicker-here form-control' data-language='es' name="fecha" placeholder="Fecha del evento" />
+                                                        class=' datepicker-here form-control' id="c_fecha" data-language='es' name="fecha" placeholder="Fecha del evento" />
                                                         <div id="fecha-status"></div>
                                                 </div>
                                                 
                                                 <div class="row">
                                                     
                                                     <div class="col-6 form-group">
-                                                        <select class="form-control" name="opciones" placeholder="Tipo de servicio">
+                                                        <select class="form-control" name="opcionesServicio" id="c_opcionesSevicio" placeholder="Tipo de servicio">
                                                             <option value="">Tipo de producto</option>
                                                             <option value="Carne">Carne</option>
                                                             <option value="Lácteo">Lácteo</option>
@@ -108,7 +158,7 @@
                                                         <div id="opciones-servicio-status"></div>
                                                     </div>
                                                     <div class="col-6 form-group">
-                                                            <select class="form-control" name="opciones" placeholder="Carga (Toneladas)">
+                                                            <select class="form-control" id="c_opcionesCarga" name="opcionesCarga" placeholder="Carga (Toneladas)">
                                                                 <option value="">Carga (Toneladas)</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -129,15 +179,17 @@
                                                     <div id="mensaje-status"></div>
                                                 </div>
                                                 <div class="form-check ">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <input class="form-check-input" type="checkbox" value="" name="terminos" id="terminos">
                                                         <label class="form-check-label" for="defaultCheck1">
-                                                          <a class="aviso2" href="aviso-privacidad.html" target="_blank" >Acepto terminos de prvacidad</a>
+                                                          <a class="aviso2" href="aviso-privacidad.html" target="_blank" >Acepto términos de privacidad</a>
                                                         </label>
-                                                      </div>
+                                                </div>
+
+                                                <div id="terminos-status"></div>
                                                    <div class="row justify-content-center">
-                                                        <button type="submit" class="btn-enviar"> ENVIAR </button>
+                                                        <input type="hidden" name="ajax">
+                                                        <input type="button" value="ENVIAR" id="btn-ajax" class="btn-enviar">
                                                    </div>
-                                                
                                             </div>
                                         </form>
                                     </div>
@@ -273,40 +325,41 @@
              <div class="row">
                     
                             <h2 class="contacto">¡CONTÁCTANOS!</h2>
-                             <form action="mail/FormularioContacto.php" id="contact-form" method="post" role="form">
+                             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="contact-form" method="post" role="form">
                                  <div class="ajax-hidden">
                                      <div class="row">
 
                                      
                                      <div class="form-group col-xs-12 col-md-6" >
                                         <label class="sr-only" for="c_name">Nombre</label>
-                                        <input type="text" id="c_name" class="form-control" name="nombre2" placeholder="Nombre">
+                                        <input type="text" id="c_name2" class="form-control" name="nombre2" placeholder="Nombre">
                                         <div id="nombre2-status"></div>
                                     </div>
                                     <div class="form-group col-xs-12 col-md-6">
                                          <label class="sr-only" for="c_email">E-mail </label>
-                                        <input type="email2" id="c_email" class="form-control" name="email2" placeholder="E-mail">
+                                        <input type="email" id="c_email2" class="form-control" name="email2" placeholder="E-mail">
                                         <div id="email2-status"></div>
                                     </div>
                                     <div class="form-group col-xs-12 col-md-6">
                                             <label class="sr-only" for="c_phone">Telefono </label>
-                                            <input type="number" id="c_phone" class="form-control" name="telefono2" placeholder="Telefono">
+                                            <input type="number" id="c_phone2" class="form-control" name="telefono2" placeholder="Telefono">
                                             <div id="telefono2-status"></div>
                                      </div>
                                      <div class="form-group col-xs-12 col-md-6">
                                             <label class="sr-only" for="c_ciudad">Ciudad </label>
-                                            <input type="number" id="c_ciudad" class="form-control" name="ciudad2" placeholder="Ciudad">
+                                            <input type="text" id="c_ciudad2" class="form-control" name="ciudad2" placeholder="Ciudad">
                                             <div id="ciudad2-status"></div>
                                      </div>
                                      
                                     <div class="form-group col-xs-12 col-md-12">
-                                        <textarea class="form-control" id="c_message" name="mensaje2" rows="7" placeholder="Mensaje"></textarea>
+                                        <textarea class="form-control" id="c_message2" name="mensaje2" rows="7" placeholder="Mensaje"></textarea>
                                         <div id="mensaje2-status"></div>
                                     </div>
                                     <div class="row ">
-                                         <button type="submit" class="btn-enviar2">
-                                                 ENVIAR
-                                           </button>
+                                        <input type="hidden" name="ajax2">
+                                        <input type="button" value="Enviar" id="btn-ajax2" class="btn-enviar2">
+
+                                        
                                            <div class="form-check acepto">
                                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                                 <label class="form-check-label" for="defaultCheck1">
@@ -340,6 +393,9 @@
    <!-- datepicker -->
    <script src="js/datepicker.min.js"></script>
    <script src="js/datepickerLang.js"></script>
+        <!--Validaciones-->
+        <script src="js/validaciones.js"></script>
+   
   
    <script >
      // Initialization

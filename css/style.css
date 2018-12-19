@@ -549,6 +549,22 @@ h4.mt-0 {
     width: 184px;
     font-size: 19px;
 }
+}
 
+#gracias{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
 
+#gracias h1{
+    padding-top: 20px;      
+}
+
+.gracias-texto{
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
 }
