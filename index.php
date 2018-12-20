@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -230,100 +230,98 @@
                     </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margen-top">
-                    <div class="media">
-                            <img class="align-self-center mr-3" src="images/2.png" alt="PRODUCTOS LACTEOS" width="115px">
-                            <div class="media-body">
-                              <h4 class="mt-0">PRODUCTOS LÁCTEOS</h4>
-                             </div>
+                <div class="media">
+                    <img class="align-self-center mr-3" src="images/2.png" alt="PRODUCTOS LACTEOS" width="115px">
+                    <div class="media-body">
+                    <h4 class="mt-0">PRODUCTOS LÁCTEOS</h4>
                     </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margen-top">
-                    <div class="media">
-                            <img class="align-self-center mr-3" src="images/3.png" alt="FRUTAS y VERDURAS" width="115px">
-                            <div class="media-body">
-                              <h4 class="mt-0">FRUTAS Y VERDURAS</h4>
-                             </div>
-                    </div>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margen-top">
                 <div class="media">
-                        <img class="align-self-center mr-3" src="images/7.png" alt="FRUTAS y VERDURAS" width="115px">
-                        <div class="media-body">
-                          <h4 class="mt-0">PRODUCTOS FARMACÉUTICOS</h4>
-                         </div>
+                    <img class="align-self-center mr-3" src="images/3.png" alt="FRUTAS y VERDURAS" width="115px">
+                    <div class="media-body">
+                      <h4 class="mt-0">FRUTAS Y VERDURAS</h4>
+                     </div>
                 </div>
-        </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margen-top">
+                <div class="media">
+                    <img class="align-self-center mr-3" src="images/7.png" alt="FRUTAS y VERDURAS" width="115px">
+                    <div class="media-body">
+                      <h4 class="mt-0">PRODUCTOS FARMACÉUTICOS</h4>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
     </section>
 
     <section class="services background-image">
-        <div class=" container  ">
+        <div class="container">
             <div class="row ">
                 <div class="col-xs-12 col-md-8 "> 
                     <div class="servicios azul">
 
-                        <h3 ><strong>SERVICIO DE LOGISTICA Y TRANSPORTACION EN CAJAS REFRIGERADAS</strong> </h3>
-                             <div class="col-xs-12 col-md-8">
-                                    <ul class="servicio">
-                                            <li class="servicio"> <i class="fas fa-circle"></i> Camiones con cajas de 6 y 10 toneladas.</li>
-                                            <li class="servicio"><i class="fas fa-circle"></i>  Camiones nuevos y con menos de 3 años de uso.</li>
-                                            <li class="servicio"><i class="fas fa-circle"></i> Última tecnología de refrigeración en unidades con equipo <b> Thermo King</b>.
-                                                <li class="servicio"> <i class="fas fa-circle"></i> Contamos con los mejores aislamientos para tener siempre tus productos frescos y a tiempo</li>
-                                                </li>
-                                                <li class="servicio"> <i class="fas fa-circle"></i> Transporta con nosotros tus productos perecederos: 
-                                                        Lácteos y Quesos; Carnes y Carnes Frías;
-                                                        Frutas y Verduras; etc.</li>
-                                        </ul>
-                             </div>
-                                                           
+                        <h3><strong>SERVICIO DE LOGISTICA Y TRANSPORTACION EN CAJAS REFRIGERADAS</strong> </h3>
+                        <div class="col-xs-12 col-md-8">
+                            <ul class="servicio">
+                                <li class="servicio"> <i class="fas fa-circle"></i> Camiones con cajas de 6 y 10 toneladas.</li>
+                                <li class="servicio"><i class="fas fa-circle"></i>  Camiones nuevos y con menos de 3 años de uso.</li>
+                                <li class="servicio"><i class="fas fa-circle"></i> Última tecnología de refrigeración en unidades con equipo <b> Thermo King</b>.</li>
+                                <li class="servicio"> <i class="fas fa-circle"></i> Contamos con los mejores aislamientos para tener siempre tus productos frescos y a tiempo</li>              
+                                <li class="servicio"> <i class="fas fa-circle"></i> Transporta con nosotros tus productos perecederos: 
+                                    Lácteos y Quesos; Carnes y Carnes Frías;
+                                    Frutas y Verduras; etc.
+                                </li>
+                            </ul>
+                        </div>                                    
                     </div>
                 </div> 
                 <div class="col-xs-12 col-md-4 oculto-movil">
-                        <img class="experiencia"    src="images/4.png" alt=" 10 años de experiencia" width="200">
-
-                
-                 
+                    <img class="experiencia" src="images/4.png" alt=" 10 años de experiencia" width="200">
                 </div>
                 
 
             </div>
-
         </div>
-
     </section>
+
+
     <section class="section">
         <div class="container">
-                <H2 class="cobertura">LOGÍSTICA, COBERTURA Y RASTREO DIGITAL</H2>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 margen-top2">
-                        <div class="media">
-                                <img class="align-self-center mr-3" src="images/6.png" alt="PRODUCTOS LACTEOS" width="130px">
-                                <div class="media-body">
-                                    <h4 class="mt-0">RASTREO DIGITAL GPS 24/7</h4>
-                                 </div>
+            <h2 class="cobertura">LOGÍSTICA, COBERTURA Y RASTREO DIGITAL</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 margen-top2">
+                    <div class="media">
+                        <img class="align-self-center mr-3" src="images/6.png" alt="PRODUCTOS LACTEOS" width="130px">
+                        <div class="media-body">
+                            <h4 class="mt-0">RASTREO DIGITAL GPS 24/7</h4>
                         </div>
+                    </div>
                 </div>
-                        <div class="col-xs-12 col-sm-6 margen-top2">
-                                <div class="media">
-                                        <img class="align-self-center mr-3" src="images/5.png" alt="PRODUCTOS CARNICOS" width="130px">
-                                        <div class="media-body">
-                                            <h4 class="mt-0">APOYANDO LA CADENA DE  SUMINISTRO DE TU NEGOCIO</h4>
-                                         </div>
-                                </div>
+                <div class="col-xs-12 col-sm-6 margen-top2">
+                    <div class="media">
+                        <img class="align-self-center mr-3" src="images/5.png" alt="PRODUCTOS CARNICOS" width="130px">
+                        <div class="media-body">
+                            <h4 class="mt-0">APOYANDO LA CADENA DE  SUMINISTRO DE TU NEGOCIO</h4>
                         </div>
+                    </div>
+                </div>
                         
-             </div>
-                    <div class="row justify-content-center">
-                         <button type="submit" class="btn-llamar">  LLÁMANOS  </button>
-                     </div>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn-llamar">  LLÁMANOS  </button>
+            </div>
 
         </div> 
      </section>
-     <footer class="footer1">
-         <div class="container">
-             <div class="row">
+
+
+    <footer class="footer1">
+        <div class="container">
+            <div class="row">
                     
                             <h2 class="contacto">¡CONTÁCTANOS!</h2>
                              <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="contact-form" method="post" role="form">
@@ -343,7 +341,7 @@
                                     </div>
                                     <div class="form-group col-xs-12 col-md-6">
                                             <label class="sr-only" for="c_phone">Telefono </label>
-                                            <input type="number" id="c_phone2" class="form-control" name="telefono2" placeholder="Telefono">
+                                            <input type="number" id="c_phone2" class="form-control" name="telefono2" placeholder="Teléfono">
                                             <div id="telefono2-status" style="color:red;"></div>
                                      </div>
                                      <div class="form-group col-xs-12 col-md-6">
@@ -378,9 +376,9 @@
                              </form>
                          </div>
 
-                         <div class="row justify-content-center ">
-                                <p class="copy">Thermotransportes, S.A. de C.V. Derechos Reservados Monterrey, Nuevo León © 2018</p>
-                         </div>  
+                        <div class="row justify-content-center ">
+                            <p class="copy">Thermotransportes, S.A. de C.V. Derechos Reservados Monterrey, Nuevo León © 2018</p>
+                        </div>  
               </div> 
      </footer>
 
@@ -396,7 +394,6 @@
     <!--Validaciones-->
     <script src="js/validaciones.js"></script>
    
-  
    <script >
         // Initialization
         //$('#my-element').datepicker([options])
@@ -405,7 +402,5 @@
         });
    </script>
      
-    
-
 </body>
 </html>
