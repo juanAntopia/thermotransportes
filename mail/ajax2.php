@@ -1,6 +1,5 @@
 <?php
 
-
 $msjStatus2 = null;
 
 //comprobar si existe el botón
@@ -12,7 +11,6 @@ if(isset($_POST['ajax2'])){
 	(int)$telefono2 = trim($_POST['telefono2']);
 	$ciudad2 = trim($_POST['ciudad2']);
 	$mensaje2 = trim($_POST['mensaje2']);
-
 
 	//validación del campo nombre
 	if($nombre2 == ""){
@@ -156,6 +154,5 @@ if(isset($_POST['ajax2'])){
 }
 
 echo $msjStatus2;
-
 
 ?>
