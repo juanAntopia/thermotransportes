@@ -15,6 +15,7 @@ if(isset($_POST['ajax'])){
 	$opcionesServicio = trim($_POST['opcionesServicio']);
 	$opcionesCarga = trim($_POST['opcionesCarga']);
 	$mensaje = trim($_POST['mensaje']);
+	
 
 	//variables para la fecha
 	$hoy = date("Y-m-d");
@@ -24,84 +25,84 @@ if(isset($_POST['ajax'])){
 
 	//validación del campo nombre
 	if($nombre == ""){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(!preg_match('/^[a-zA-Z ]*$/', $nombre)){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='Solo se admiten letras';</script>";
+		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='*Solo se admiten letras';</script>";
 	}
 
 	elseif(strlen($nombre)<2){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($nombre)>100){
-		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='M&aacute;ximo 100 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('nombre-status').innerHTML='*M&aacute;ximo 100 caracteres';</script>";
 	}
 
 	//validación campo email
 	elseif($email == ""){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('email-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML='Introduce un correo v&aacute;lido';</script>";
+		$msjStatus = "<script>document.getElementById('email-status').innerHTML='*Introduce un correo v&aacute;lido';</script>";
 	}
 
 	elseif(strlen($email)<2){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('email-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($email)>200){
-		$msjStatus = "<script>document.getElementById('email-status').innerHTML='M&aacute;ximo 200 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('email-status').innerHTML='*M&aacute;ximo 200 caracteres';</script>";
 	}
 
 	//validación campo teléfono
 	elseif($telefono == ""){
-		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(!filter_var($telefono, FILTER_VALIDATE_INT)){
-		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='S&oacute;lo n&uacute;meros';</script>";
+		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='*S&oacute;lo n&uacute;meros';</script>";
 	}
 
 	elseif(strlen($telefono)<8){
-		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='Introduzca un t&eacute;lefono v&aacute;lido';</script>";
+		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='*Introduzca un t&eacute;lefono v&aacute;lido';</script>";
 	}
 
 	elseif(strlen($telefono)>15){
-		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='T&eacute;lefono demasiado largo';</script>";
+		$msjStatus = "<script>document.getElementById('telefono-status').innerHTML='*T&eacute;lefono demasiado largo';</script>";
 	}
 
 	//validación campo origen
 	elseif($origen == ""){
-		$msjStatus = "<script>document.getElementById('origen-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('origen-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(strlen($origen)<2){
-		$msjStatus = "<script>document.getElementById('origen-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('origen-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($origen)>70){
-		$msjStatus = "<script>document.getElementById('origen-status').innerHTML='M&aacute;ximo 70 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('origen-status').innerHTML='*M&aacute;ximo 70 caracteres';</script>";
 	}
 
 	//validación campo destino
 	elseif($destino == ""){
-		$msjStatus = "<script>document.getElementById('destino-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('destino-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(strlen($destino)<2){
-		$msjStatus = "<script>document.getElementById('destino-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('destino-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($destino)>70){
-		$msjStatus = "<script>document.getElementById('destino-status').innerHTML='M&aacute;ximo 70 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('destino-status').innerHTML='*M&aacute;ximo 70 caracteres';</script>";
 	}
 
 	//validación campo fecha
 	elseif($fecha == ""){
-		$msjStatus = "<script>document.getElementById('fecha-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('fecha-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	/*elseif($hoy == $fechaFormulario || $hoy > $fechaFormulario){
@@ -110,25 +111,30 @@ if(isset($_POST['ajax'])){
 
 	//validación campo opciones-servicio
 	elseif($opcionesServicio == ""){
-		$msjStatus = "<script>document.getElementById('opciones-servicio-status').innerHTML='Debe seleccionar una opci&oacute;n';</script>";
+		$msjStatus = "<script>document.getElementById('opciones-servicio-status').innerHTML='*Debe seleccionar una opci&oacute;n';</script>";
 	}
 
 	//validación campo opciones-carga
 	elseif($opcionesCarga == ""){
-		$msjStatus = "<script>document.getElementById('opciones-carga-status').innerHTML='Debe seleccionar una opci&oacute;n';</script>";
+		$msjStatus = "<script>document.getElementById('opciones-carga-status').innerHTML='*Debe seleccionar una opci&oacute;n';</script>";
 	}
 
 	//validación campo mensaje
 	elseif($mensaje == ""){
-		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(strlen($mensaje)<2){
-		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($mensaje)>500){
-		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML='M&aacute;ximo 500 caracteres';</script>";
+		$msjStatus = "<script>document.getElementById('mensaje-status').innerHTML='*M&aacute;ximo 500 caracteres';</script>";
+	}
+
+	//validar check
+	elseif(!isset($_POST['terminos'])){
+		$msjStatus = "<script>document.getElementById('terminos-status').innerHTML='*Debes aceptar los t&eacute;rminos y condiciones';</script>";
 	}
 
 	else{

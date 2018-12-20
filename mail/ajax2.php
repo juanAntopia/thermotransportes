@@ -16,79 +16,84 @@ if(isset($_POST['ajax2'])){
 
 	//validación del campo nombre
 	if($nombre2 == ""){
-		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(!preg_match('/^[a-zA-Z ]*$/', $nombre2)){
-		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='Solo se admiten letras';</script>";
+		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='*Solo se admiten letras';</script>";
 	}
 
 	elseif(strlen($nombre2)<2){
-		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($nombre2)>100){
-		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='M&aacute;ximo 100 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('nombre2-status').innerHTML='*M&aacute;ximo 100 caracteres';</script>";
 	}
 
 	//validación campo email
 	elseif($email2 == ""){
-		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(!filter_var($email2, FILTER_VALIDATE_EMAIL)){
-		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='Introduce un correo v&aacute;lido';</script>";
+		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='*Introduce un correo v&aacute;lido';</script>";
 	}
 
 	elseif(strlen($email2)<2){
-		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($email2)>200){
-		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='M&aacute;ximo 200 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('email2-status').innerHTML='*M&aacute;ximo 200 caracteres';</script>";
 	}
 
 	//validación campo teléfono
 	elseif($telefono2 == ""){
-		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(!filter_var($telefono2, FILTER_VALIDATE_INT)){
-		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='S&oacute;lo n&uacute;meros';</script>";
+		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='*S&oacute;lo n&uacute;meros';</script>";
 	}
 
 	elseif(strlen($telefono2)<8){
-		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='Introduzca un t&eacute;lefono v&aacute;lido';</script>";
+		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='*Introduzca un t&eacute;lefono v&aacute;lido';</script>";
 	}
 
 	elseif(strlen($telefono2)>15){
-		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='T&eacute;lefono demasiado largo';</script>";
+		$msjStatus2 = "<script>document.getElementById('telefono2-status').innerHTML='*T&eacute;lefono demasiado largo';</script>";
 	}
 
 	//validación campo ciudad
 	elseif($ciudad2 == ""){
-		$msjStatus2 = "<script>document.getElementById('ciudad2-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus2 = "<script>document.getElementById('ciudad2-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(strlen($ciudad2)<2){
-		$msjStatus2 = "<script>document.getElementById('ciudad2-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('ciudad2-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($ciudad2)>70){
-		$msjStatus2 = "<script>document.getElementById('ciudad2-status').innerHTML='M&aacute;ximo 70 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('ciudad2-status').innerHTML='*M&aacute;ximo 70 caracteres';</script>";
 	}
 
 	//validación campo mensaje
 	elseif($mensaje2 == ""){
-		$msjStatus2 = "<script>document.getElementById('mensaje2-status').innerHTML='El campo est&aacute; vac&iacute;o';</script>";
+		$msjStatus2 = "<script>document.getElementById('mensaje2-status').innerHTML='*El campo es requerido';</script>";
 	}
 
 	elseif(strlen($mensaje2)<2){
-		$msjStatus2 = "<script>document.getElementById('mensaje2-status').innerHTML='M&iacute;nimo 2 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('mensaje2-status').innerHTML='*M&iacute;nimo 2 caracteres';</script>";
 	}
 
 	elseif(strlen($mensaje2)>500){
-		$msjStatus2 = "<script>document.getElementById('mensaje2-status').innerHTML='M&aacute;ximo 500 caracteres';</script>";
+		$msjStatus2 = "<script>document.getElementById('mensaje2-status').innerHTML='*M&aacute;ximo 500 caracteres';</script>";
+	}
+
+	//validar check
+	elseif(!isset($_POST['terminos2'])){
+		$msjStatus2 = "<script>document.getElementById('terminos2-status').innerHTML='*Debes aceptar los t&eacute;rminos y condiciones';</script>";
 	}
 
 	else{
